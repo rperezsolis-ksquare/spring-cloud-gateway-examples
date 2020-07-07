@@ -1,0 +1,11 @@
+server:
+  port: 8181
+  
+spring:
+  application:
+    name: demo-service
+  cloud:
+    consul:
+      discovery:        instance-id: ${spring.application.name}:${server.port}
+      host: localhost
+      port: 8500
